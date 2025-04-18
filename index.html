@@ -15,6 +15,11 @@
 		/>
 		<title>Happy birthday</title>
 	</head>
+	
+	<audio id="bg-music" autoplay loop>
+		<source src="CUTE.mp3" type="audio/mpeg" />
+	</audio>
+	
 	<body>
 		<div class="container">
 			<div class="boxcontainer">
@@ -107,6 +112,13 @@
 		</div>
 	</body>
 	<script>
+		window.addEventListener('click', function () {
+    		const audio = document.getElementById('bg-music');
+    		if (audio.paused) {
+      			audio.play();
+    		}
+  		});
+		
 		document.addEventListener('mousemove', function (e) {
 			let body = document.querySelector('body');
 			let heart = document.createElement('span');
